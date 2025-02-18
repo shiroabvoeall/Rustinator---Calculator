@@ -24,9 +24,9 @@ fn main() {
     }
 }
 
-fn calculate_num(firstn: &str, secondn: &str, dig_operator: &str) -> Option<i8> {
-    let num1 = firstn.trim().parse::<i8>().ok()?;
-    let num2 = secondn.trim().parse::<i8>().ok()?;
+fn calculate_num(firstn: &str, secondn: &str, dig_operator: &str) -> Option<i32> {
+    let num1 = firstn.trim().parse::<i32>().ok()?;
+    let num2 = secondn.trim().parse::<i32>().ok()?;
 
     match dig_operator.trim() {
         "+" => Some(num1 + num2),
@@ -36,7 +36,7 @@ fn calculate_num(firstn: &str, secondn: &str, dig_operator: &str) -> Option<i8> 
             if num2 != 0 {
                 Some(num1 / num2)
             } else {
-                println!("Error: Cannot divide by Zero!");
+                println!("Error: Cannot divide by zero!");
                 None
             }
         }
