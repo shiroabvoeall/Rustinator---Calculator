@@ -36,7 +36,7 @@ fn calculate_num(firstn: &str, secondn: &str, dig_operator: &str) -> Option<i8> 
             if num2 != 0 {
                 Some(num1 / num2)
             } else {
-                println!("Error: Division by zero!");
+                println!("Error: Cannot divide by Zero!");
                 None
             }
         }
